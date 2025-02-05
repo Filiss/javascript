@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidades</title>
+</head>
+<body>
+    <h1>Verifique sua Nacionalidade</h1>
+    <label for="pais">Digite seu país:</label>
+    <input type="text" name="paises" id="pais" placeholder="Ex: Brasil, EUA">
+    <input type="button" value="Verificar" onclick="nac()">
+    <p id="res"></p>
+
+    <script>
+       function nac(){
+            var pais = document.getElementById('pais').value;
+            console.log(`Vivendo em ${pais}`);
+
+            if (pais == 'Brasil') {
+                document.getElementById('res').innerHTML = 'Você é Brasileiro!'
+            } else {
+                document.getElementById('res').innerHTML = 'Você é Estrangeiro!'
+            }
+       }
+    </script>
+</body>
+</html>
