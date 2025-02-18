@@ -2,7 +2,7 @@ function verificar() {
     var data = new Date()
     var ano = data.getFullYear()
     var fano = document.getElementById('txtano')
-    var res = document.getElementById('res')
+    var res = document.querySelector('div#res')
     if (fano.value.length == 0 || Number (fano.value) > ano){
         window.alert('[ERRO] Verifique os dados e tente novamente!')
     } else {
@@ -13,33 +13,33 @@ function verificar() {
         img.setAttribute('id', 'fotof')
         if (fsex[0].checked) {
             gênero = 'Homem'
-            if (idade >= 0 && idade < 12){
+            if (idade >= 0 && idade < 10){
+                img.setAttribute('src', './imagens/criança-m.png')
                 //CRIANÇA
-                img.setAttribute('src', './imagens/criança-m.jpg')
-            } else if (idade < 25){
+            } else if (idade < 21){
+                img.setAttribute('src', './imagens/jovem-m.png')
                 //JOVEM
-                img.setAttribute('src', './imagens/jovem-m.jpg')
             } else if (idade < 50){
+                img.setAttribute('src', './imagens/adulto-m.png')
                 //ADULTO
-                img.setAttribute('src', './imagens/adulto-m.jpg')
             } else {
+                img.setAttribute('src', './imagens/idoso-m.png')
                 //IDOSO
-                img.setAttribute('src', './imagens/idoso-m.jpg')
             }
         }else if (fsex[1].checked) {
             gênero = 'Mulher'
-            if (idade >= 0 && idade < 12){
+            if (idade >= 0 && idade < 10){
+                img.setAttribute('src', './imagens/criança-f.png')
                 //CRIANÇA
-                img.setAttribute('src', './imagens/criança-f.jpg')
-            } else if (idade < 25){
+            } else if (idade < 21){
+                img.setAttribute('src', './imagens/jovem-f.png')
                 //JOVEM
-                img.setAttribute('src', './imagens/jovem-f.jpg')
             } else if (idade < 50){
+                img.setAttribute('src', './imagens/adulto-f.png')
                 //ADULTO
-                img.setAttribute('src', './imagens/adulto-f.jpg')
             } else {
+                img.setAttribute('src', './imagens/idoso-f.png')
                 //IDOSO
-                img.setAttribute('src', './imagens/idoso-f.jpg')
             }
         }
         res.style.textAlign = 'center'
